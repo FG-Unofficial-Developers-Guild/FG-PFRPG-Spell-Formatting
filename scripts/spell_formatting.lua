@@ -12,12 +12,12 @@ local function addSpell_new(nodeSource, nodeSpellClass, nLevel, ...)
 
 	-- Get the new spell entry
 	local nodeNewSpell = addSpell_old(nodeSource, nodeSpellClass, nLevel, ...)
-	if not nodeNewSpell or type(nodeNewSpell) ~= "databasenode" then
+	if not nodeNewSpell or type(nodeNewSpell) ~= 'databasenode' then
 		return
 	end
 
 	-- Copy the formatted spell details over
-	DB.setValue(nodeNewSpell, "description_full", "formattedtext", DB.getValue(nodeSource, "description", "<p></p>"))
+	DB.setValue(nodeNewSpell, 'description_full', 'formattedtext', DB.getValue(nodeSource, 'description', '<p></p>'))
 
 	return nodeNewSpell
 end

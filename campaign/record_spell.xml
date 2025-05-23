@@ -3,27 +3,13 @@
 <!-- Please see the LICENSE.md file included with this distribution for attribution and copyright information. -->
 
 <root>
-	<windowclass name="spelldesc2_main" merge="join">
+	<windowclass name="spelldesc2_main" copy="spelldesc_main">
 		<sheetdata>
-			<string_column_full name="description">
-				<invisible />
-			</string_column_full>
+			<ft_content_columnh_full name="description_full">
+			  <script file="campaign/scripts/record_spell_description_full.lua" />
+			</ft_content_columnh_full>
 
-			<ft_columnh name="description_full">
-			<script file="campaign/scripts/record_spell_description_full.lua" />
-			</ft_columnh>
-
-			<windowlist name="linkedspells">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="15" />
-					<left offset="5" />
-					<right offset="-5" />
-				</anchored>
-				<datasource>.linkedspells</datasource>
-				<class>linkedspell</class>
-				<noscroll />
-				<invisible />
-			</windowlist>
+			<ft_content_columnh_full name="description" merge="delete" />
 		</sheetdata>
 	</windowclass>
 </root>

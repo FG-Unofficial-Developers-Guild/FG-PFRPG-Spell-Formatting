@@ -135,7 +135,7 @@ function onValueChanged()
 end
 
 function onInit()
-	local sDesc = window.description.getValue()
+	local sDesc = DB.getChild(nodeSpell, 'description')
 	local sDescFull = window.description_full.getValue()
 
 	if sDesc ~= '' and (sDescFull == '' or sDescFull == '<p></p>' or sDescFull == '<p />') then

@@ -7,7 +7,7 @@
 		<name>Feature: Spell Formatting Improvement</name>
 		<version>1.11</version>
 		<loadorder>33</loadorder>
-		<author>bmos (Wil Thieme)</author>
+		<author>bmos (Ramona T)</author>
 		<description>This extension allows full formatting of the spell descriptions linked from the actions tab.</description>
 		<ruleset>
 			<name>3.5E</name>
